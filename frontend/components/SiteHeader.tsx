@@ -61,7 +61,7 @@ export default function SiteHeader() {
                     className={`nav-toggle${open ? " open" : ""}`}
                     aria-label="Toggle navigation"
                     aria-expanded={open}
-                    onClick={() => setOpen((value) => !value)}
+                    onClick={() => setOpenAt(open ? null : pathname)}
                 >
                     <span /><span /><span />
                 </button>
@@ -72,14 +72,14 @@ export default function SiteHeader() {
                                 <Link
                                     href={link.href}
                                     className={isActive(link.href) ? "active" : undefined}
-                                    onClick={() => setOpen(false)}
+                                    onClick={closeMenu}
                                 >
                                     {link.label}
                                 </Link>
                             </li>
                         ))}
                     </ul>
-                    <Link href="/donate" className="btn-donate" onClick={() => setOpen(false)}>
+                    <Link href="/donate" className="btn-donate" onClick={closeMenu}>
                         Donate
                     </Link>
                 </nav>
