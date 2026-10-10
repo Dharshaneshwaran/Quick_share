@@ -1,0 +1,113 @@
+/* ============ Responsive ============ */
+@media (max-width: 1199px){
+    .hero h1{ font-size: clamp(32px, 4.4vw, 48px); }
+    .hero-visual .main-img{ max-width: 440px; }
+    .section-head-link{ text-align: left; margin-top: 18px; }
+}
+
+@media (max-width: 991px){
+    :root{ --header-h: 60px; }
+
+    .nav-toggle{ display: flex; }
+
+    .site-header .container{ position: static; }
+
+    .main-nav{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(255,255,255,.98);
+        -webkit-backdrop-filter: blur(16px);
+        backdrop-filter: blur(16px);
+        max-height: 0;
+        visibility: hidden;
+        pointer-events: none;
+        overflow: hidden;
+        transition: max-height .35s ease;
+        box-shadow: 0 18px 30px rgba(43,42,94,.15);
+        border-bottom: 1px solid var(--border-soft);
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        margin-left: 0;
+        gap: 0;
+    }
+    .main-nav.open{ max-height: calc(100dvh - var(--header-h)); overflow-y: auto; visibility: visible; pointer-events: auto; }
+    .main-nav ul{
+        position: static;
+        transform: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 2px;
+        padding: 14px 20px 10px;
+    }
+    .main-nav ul li a{ padding: 13px 14px; font-size: var(--t-base); color: var(--dark); }
+    .main-nav ul li a:hover,
+    .main-nav ul li a.active{ color: var(--accent); }
+    .main-nav .btn-donate{
+        margin: 4px 20px 20px;
+        text-align: center;
+        display: block;
+    }
+
+    .hero{ padding: 64px 0 56px; }
+    .hero-visual{ margin-top: 44px; }
+    .float-card{ left: 12px; }
+
+    .section{ padding: 64px 0; }
+    .page-banner{ padding: 74px 0 52px; }
+
+    .stats{ padding: 56px 0; }
+    .cta-band{ padding: 58px 0; }
+    .form-card{ padding: 30px 22px; }
+    .contact-info{ padding: 32px 24px; }
+}
+
+@media (max-width: 767px){
+    .hero h1{ font-size: 32px; }
+    .hero .lead{ font-size: var(--t-base); }
+    .heading h2{ font-size: 28px; }
+    .cause-tile h3, .cause-card h3, .program-card h3{ font-size: var(--t-xl); }
+    .cause-tile{ padding: 28px 20px; }
+    .gallery-sec .image-container .image{ height: 210px; }
+    .feature-media .badge{ display: none; }
+    .stat-item .lbl{ font-size: var(--t-base); }
+    .ticker-inner span{ font-size: 15px; letter-spacing: 3px; padding-right: 26px; }
+    .hero-quote{ margin-top: 26px; padding-left: 38px; }
+    .hero-quote .q-mark{ font-size: 46px; top: -10px; }
+    .hero-quote p{ font-size: 17px; }
+    .ghost-inner span{ -webkit-text-stroke-width: 1.5px; }
+}
+
+@media (max-width: 551px){
+    .brand-text{ font-size: 15px; letter-spacing: 1.8px; }
+    .brand-icon{ width: 30px; height: 30px; font-size: 14px; }
+    .hero h1{ font-size: 28px; }
+    .hero-actions{ width: 100%; }
+    .hero-actions a{ width: 100%; text-align: center; }
+    .float-card{ display: none; }
+    .heading h2{ font-size: 25px; }
+    .page-banner h1{ font-size: 27px; }
+    .breadcrumb{ font-size: var(--t-sm); padding: 7px 14px; }
+    .gallery-sec .image-container{ grid-template-columns: 1fr; }
+    .pop-image .pop-close{ top: 16px; right: 20px; font-size: 36px; }
+    .newsletter{ flex-direction: column; gap: 10px; }
+    .newsletter input{ flex: 0 0 auto; border-right: 1.5px solid var(--border); border-radius: var(--r-sm); }
+    .newsletter button{ border-radius: var(--r-sm); height: 46px; }
+    .form-row .form-group{ flex: 1 1 100%; }
+    .form-card{ padding: 26px 18px; }
+}
+
+/* ===== Showcase (GSAP) ===== */
+@media (max-width: 991px){
+    .scroll-badge{ display: none; }
+    .blob-a{ width: 210px; top: -40px; left: -70px; }
+    .blob-b{ width: 250px; bottom: -60px; right: -55px; }
+    .programs-pin{ min-height: 0; display: block; padding: 72px 0; }
+    .programs-pin .heading{ margin-bottom: 44px; }
+    .htrack{ flex-direction: column; gap: 20px; padding: 4px 15px 8px; }
+    .hpanel{ flex: 0 0 auto; width: 100%; }
+    .hpanel-cta{ padding: 30px 24px; }
+    .squiggle{ width: 96px; }
+}
